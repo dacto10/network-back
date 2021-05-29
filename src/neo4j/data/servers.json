@@ -1,0 +1,26 @@
+[
+    {
+        "mac": "63-E1-C9-0C-C9-79",
+        "server_ip_address": "172.16.1.2"
+    },
+    {
+        "mac": "D4-DF-B2-4E-89-7D",
+        "server_ip_address": "172.16.2.2"
+    },
+    {
+        "mac": "DF-A7-1C-E1-DC-D1   ",
+        "server_ip_address": "172.16.3.2"
+    },
+    {
+        "mac": "58-B8-2B-51-57-AD",
+        "server_ip_address": "172.16.4.2"
+    },
+    {
+        "mac": "F9-BC-34-BC-1D-25",
+        "server_ip_address": "172.16.5.2"
+    },
+    {
+        "mac": "B8-FB-6A-07-55-97",
+        "server_ip_address": "172.16.6.2"
+    }
+]

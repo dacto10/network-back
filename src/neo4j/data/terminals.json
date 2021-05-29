@@ -1,0 +1,82 @@
+[
+    {
+        "mac": "67-F0-BE-18-3D-5A",
+        "terminal_ip_address": "192.168.0.2",
+        "arp_cache": []
+    },
+    {
+        "mac": "86-59-EF-BE-C0-82",
+        "terminal_ip_address": "192.168.0.3",
+        "arp_cache": []
+    },
+    {
+        "mac": "89-4E-21-80-51-B1",
+       "terminal_ip_address": "192.168.0.4",
+        "arp_cache": []
+    },
+    {
+        "mac": "10-72-6F-C8-F0-1B",
+        "terminal_ip_address": "192.168.1.2",
+        "arp_cache": []
+    },
+    {
+        "mac": "95-FC-5C-28-88-B0",
+        "terminal_ip_address": "192.168.1.3",
+        "arp_cache": []
+    },
+    {
+        "mac": "4E-79-FB-56-F7-E2",
+        "terminal_ip_address": "192.168.1.4",
+        "arp_cache": []
+    },
+    {
+        "mac": "09-7E-AA-32-46-D5",
+        "terminal_ip_address": "192.168.1.5",
+        "arp_cache": []
+    },
+    {
+        "mac": "0A-71-73-30-16-70",
+        "terminal_ip_address": "192.168.2.2",
+        "arp_cache": []
+    },
+    {
+        "mac": "D4-95-85-07-79-4D",
+        "terminal_ip_address": "192.168.2.3",
+        "arp_cache": []
+    },
+    {
+        "mac": "C4-C3-7D-8C-66-77",
+        "terminal_ip_address": "192.168.2.4",
+        "arp_cache": []
+    },
+    {
+        "mac": "D2-C5-29-54-2D-9C",
+        "terminal_ip_address": "192.168.2.5",
+        "arp_cache": []
+    },
+    {
+        "mac": "6E-AF-61-93-36-AD",
+        "terminal_ip_address": "192.168.2.6",
+        "arp_cache": []
+    },
+    {
+        "mac": "58-94-5C-8D-D3-7C",
+        "terminal_ip_address": "192.168.3.2",
+        "arp_cache": []
+    },
+    {
+        "mac": "38-8B-FB-D7-A0-67",
+        "terminal_ip_address": "192.168.3.3",
+        "arp_cache": []
+    },
+    {
+        "mac": "7C-7B-8C-C7-33-FE",
+        "terminal_ip_address": "192.168.3.4",
+        "arp_cache": []
+    },
+    {
+        "mac": "1C-EE-A7-C5-F6-74",
+        "terminal_ip_address": "192.168.3.5",
+        "arp_cache": []
+    }
+]
