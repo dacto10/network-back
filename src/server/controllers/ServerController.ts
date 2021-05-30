@@ -17,6 +17,10 @@ export default class ServerController {
             RETURN w;
         `, {})
 
+        await this.connectWebs();
+    }
+
+    public static async connectWebs() {
         await query(`
             MATCH 
                 (s:Server),
@@ -55,6 +59,13 @@ export default class ServerController {
             RETURN w;
         `, {});
         return response.records.map((el: any) => el._fields[0].properties);
+    }
+
+    public static async createWeb(web: any) {
+        await query(`
+            CREATE (w:Web {server_ip_address: $ip, url: $url})
+            RETURN w;
+        `, {ip: web.server_ip, url: web.url});
     }
 
     public static async deleteWeb(url: string) {

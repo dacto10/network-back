@@ -23,7 +23,7 @@ routerRouter.post('/create', async (req, res) => {
     }
 });
 
-routerRouter.post('/', async (req, res) => {
+routerRouter.delete('/', async (req, res) => {
     try {
         await RouterController.deleteRouter(req.body.mac);
         res.status(200).send('Router deleted');

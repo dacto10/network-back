@@ -88,7 +88,7 @@ export default class TerminalController {
         return arpTable;
     }
 
-    public static async createTerminal(terminal: any, network: string) {
+    public static async createTerminal(terminal: any) {
         await query(`
             CREATE (t:Terminal { terminal_ip_address: $ip, mac: $mac, arp_cache: [] })
             WITH t AS t
@@ -96,7 +96,7 @@ export default class TerminalController {
             CREATE (t)-[r:BELONGS_TO_NETWORK]->(n)
             CREATE (n)-[y:HAS]->(t)
             RETURN t;
-        `, { ip: terminal.ip, mac: terminal.mac, net_ip: network })
+        `, { ip: terminal.ip, mac: terminal.mac, net_ip: terminal.network })
     }
 
     public static async deleteTerminal(mac: string) {

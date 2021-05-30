@@ -43,7 +43,7 @@ terminalRouter.put('/arp', async (req: Request, res: Response) => {
 
 terminalRouter.post('/create', async (req: Request, res: Response) => {
     try {
-        const response = await TerminalController.createTerminal(req.body.terminal, req.body.network);
+        const response = await TerminalController.createTerminal(req.body.terminal);
         res.status(200).send(response);
     } catch (e) {
         res.status(500).send(e);

@@ -1,0 +1,18 @@
+version: '3'
+services:
+    neo4j: #cambiar nombre
+        image: neo4j:3.5
+        ports:
+            - "17475:7474" #cambiar el primer puerto
+            - "7687:7687" #cambiar el primer puerto
+        networks:
+            - myytnetwork #cambiar nombre
+
+networks:
+    myytnetwork: #cambiar nombre
+        driver: bridge
+
+
+
+#Dentro de la carpeta el comando
+#sudo docker-compose up

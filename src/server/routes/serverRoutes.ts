@@ -51,6 +51,15 @@ serverRouter.get('/webs', async (req, res) => {
     }
 });
 
+serverRouter.post('/webs', async (req, res) => {
+    try {
+        await ServerController.createWeb(req.body.web);
+        res.status(200).send("Web created");
+    } catch(e) {
+        res.status(500).send(e);
+    }
+});
+
 serverRouter.delete('/webs/delete/:url', async (req, res) => {
     try {
         await ServerController.deleteWeb(req.params.url);
