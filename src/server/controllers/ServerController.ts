@@ -71,6 +71,11 @@ export default class ServerController {
             CREATE (w:Web {server_ip_address: $ip, url: $url})
             RETURN w;
         `, {ip: web.server_ip, url: web.url});
+
+        await query(`
+            MATCH ()-[r]->()
+            DELETE r;
+        `, {})
     }
 
     public static async deleteWeb(url: string) {

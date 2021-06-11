@@ -1,5 +1,6 @@
 import express from 'express';
 import NetworkController from '../controllers/NetworkController';
+import ServerController from '../controllers/ServerController';
 
 export const networkRouter = express.Router({
     strict: true
@@ -19,6 +20,7 @@ networkRouter.post('/connect', async (req, res) => {
         await NetworkController.connectRouters();
         await NetworkController.connectServers();
         await NetworkController.connectTerminals();
+        await ServerController.connectWebs();
         res.status(200).send('Connections done');
     } catch(e) {
         res.status(500).send(e);
