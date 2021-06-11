@@ -14,7 +14,12 @@ export default class RouterController {
     public static async createRouter(router: any) {
         await query(`
             CREATE (r:Router {mac: $mac, private_ip: $private_ip, public_ips: $public_ips})
-        `, {mac: router.mac, private_ip: router.private_ip, public_ips: router.public_ips})
+        `, {mac: router.mac, private_ip: router.private_ip, public_ips: router.public_ips});
+        
+        await query(`
+            MATCH ()-[r]->()
+            DELETE r;
+        `, {});
     }
 
     public static async deleteRouter(mac: string) {

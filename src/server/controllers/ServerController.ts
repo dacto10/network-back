@@ -34,7 +34,12 @@ export default class ServerController {
     public static async createServer(server: any) {
         await query(`
             CREATE (s:Server {mac: $mac, server_ip_address: $ip})
-        `, {mac: server.mac, ip: server.ip})
+        `, {mac: server.mac, ip: server.ip});
+
+        await query(`
+            MATCH ()-[r]->()
+            DELETE r;
+        `, {})
     }
 
     public static async deleteServer(mac: string) {

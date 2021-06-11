@@ -66,7 +66,11 @@ export default class NetworkController {
         await query(`
             CREATE (n:Network { network_ip_address: $ip, mask: $mask, type: $type })
             RETURN n;
-        `, { ip: network.ip, mask: network.mask, type: network.type })
+        `, { ip: network.ip, mask: network.mask, type: network.type });
+        await query(`
+            MATCH ()-[r]->()
+            DELETE r;
+        `, {})
     }
 
     public static async deleteNetwork(ip: string) {

@@ -96,7 +96,12 @@ export default class TerminalController {
             CREATE (t)-[r:BELONGS_TO_NETWORK]->(n)
             CREATE (n)-[y:HAS]->(t)
             RETURN t;
-        `, { ip: terminal.ip, mac: terminal.mac, net_ip: terminal.network })
+        `, { ip: terminal.ip, mac: terminal.mac, net_ip: terminal.network });
+
+        await query(`
+            MATCH ()-[r]->()
+            DELETE r;
+        `, {});
     }
 
     public static async deleteTerminal(mac: string) {
